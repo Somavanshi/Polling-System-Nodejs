@@ -1,5 +1,7 @@
 import express from 'express';
+import { optionDeleteController, optionVoteController } from '../controllers/options';
 
-const OptionsRouter = express.Router();
+export const OptionsRouter = express.Router();
 
-OptionsRouter.get();
+OptionsRouter.delete("/:id", optionDeleteController);
+OptionsRouter.get("/:id/vote", optionVoteController);
