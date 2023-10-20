@@ -1,5 +1,8 @@
 import mongoose from "mongoose";
 
+/**
+ * Mongo connection URL
+ */
 mongoose.connect("mongodb://localhost/polling_system_development");
 
 export const db = mongoose.connection;

@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-
+/**
+ * Created options schema
+ */
 const OptionsSchema = new mongoose.Schema({
     text: {
         type: "String",
@@ -15,4 +17,7 @@ const OptionsSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
+/**
+ * Model for Options Schema
+ */
 export const OptionModel = mongoose.model("Option", OptionsSchema);

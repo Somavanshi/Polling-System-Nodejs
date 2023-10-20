@@ -2,6 +2,9 @@ import express from 'express';
 import { QuestionModel } from '../models/question.model';
 import { OptionModel } from '../models/option.model';
 
+/**
+ * Created the question for given text
+ */
 export async function questionCreateController(req: express.Request, res: express.Response) {
     try {
         const body = req.body;
@@ -23,6 +26,9 @@ export async function questionCreateController(req: express.Request, res: expres
     }
 }
 
+/**
+ * Used to delete question with all options
+ */
 export async function questionDeleteController(req: express.Request, res: express.Response) {
     try {
         const { id } = req.params
@@ -49,6 +55,9 @@ export async function questionDeleteController(req: express.Request, res: expres
     }
 }
 
+/**
+ * return the question and all options for that id
+ */
 export async function getQuestionController(req: express.Request, res: express.Response) {
     try {
         const { id } = req.params
@@ -68,6 +77,9 @@ export async function getQuestionController(req: express.Request, res: express.R
     }
 }
 
+/**
+ * It will create the options for given question id
+ */
 export async function createOptionForQuestionId(req: express.Request, res: express.Response) {
     const { id } = req.params;
     const options = req.body.options;

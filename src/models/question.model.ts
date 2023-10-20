@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
-
+/**
+ * Created question schema
+ */
 const QuestionSchema = new mongoose.Schema({
     text: {
         type: "String",
@@ -11,4 +13,7 @@ const QuestionSchema = new mongoose.Schema({
     }]
 }, {timestamps: true});
 
+/**
+ * Created Model for question
+ */
 export const QuestionModel = mongoose.model("Question", QuestionSchema);

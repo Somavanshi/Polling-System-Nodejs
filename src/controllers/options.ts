@@ -2,6 +2,9 @@ import express from 'express';
 import { OptionModel } from '../models/option.model';
 import { QuestionModel } from '../models/question.model';
 
+/**
+ * Used to delete options
+ */
 export async function optionDeleteController(req: express.Request, res: express.Response) {
     try {
         const { id } = req.params
@@ -28,7 +31,9 @@ export async function optionDeleteController(req: express.Request, res: express.
         });
     }
 }
-
+/**
+ * Uto add vote for the options
+ */
 export async function optionVoteController(req: express.Request, res: express.Response) {
     try {
         const { id } = req.params
